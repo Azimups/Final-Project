@@ -1,0 +1,124 @@
+#intro{
+    .container{
+        .nav-bar{
+            z-index: 99999999;
+            width: 100%;
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            transition: all 0.3s;
+        }
+        .row{
+            .col-lg-12{
+                justify-content: space-between;
+                .left-side{
+                    line-height:12px;
+                    padding-left: 20px;
+                    .page-header{
+                        color: #ee5827;
+                        font-size: 40px;
+                    }
+                    .page-header-text{
+                        color: #ee5827;;
+                        padding-left: 60px;
+                        font-size: 20px;
+                    }
+                }
+                .resp-left-side{
+                    i{
+                        font-size: 32px;
+                        padding-top: 20px;
+                    }
+                }
+                .resp-right-side{
+                    .fa-shopping-cart{
+                        font-size: 32px;
+                        padding-top: 20px;
+                        span{
+                            font-size: 22px;
+                            margin-left:-4px;
+                            color: #ee5827;
+                        }
+                    }
+                }
+                .logo{
+                    line-height:12px;
+                    .page-header{
+                        color: #ee5827;
+                        font-size: 40px;
+                    }
+                    .page-header-text{
+                        color: #ee5827;;
+                        padding-left: 60px;
+                        font-size: 20px;
+                    }
+                }
+                .right-side{
+                    font-size: 20px;
+                    color: rgb(252, 252, 252);
+                    padding-top: 30px;
+                    z-index: 9999;
+                    .pd{
+                        padding-top: 19px;
+                    }
+                    ul{
+                        display: flex;
+                        gap: 39px;
+                        li{
+                            list-style: none;
+                            transition: all 0.3s;
+                            &:hover{
+                                color: #ee5827;
+                            }
+                        }
+                        .fa-shopping-cart{
+                            span{
+                                font-size: 22px;
+                                margin-left:-4px;
+                                color: #ee5827;
+                            }
+                        }
+                    }
+                    button{
+                        border: 2px solid rgb(255, 255, 255);
+                        border-radius: 80px;
+                        padding: 14px;
+                        border-color: rgb(255, 255, 255);
+                        background-color:rgba(255, 255, 255, 0);
+                        font-family: "sofia-pro",helvetica,sans-serif;
+                        transition: all 0.3s;
+                        span{
+                            padding-left: 5px;
+                            font-size:20px;
+                            color: white;
+                        }
+                        &:hover{
+                            background-color:#ee5827;
+                            border-color: #ee5827;
+                        }
+                        i{
+                            color: white;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .sticky{
+            background-color:white;
+            *{
+                color: black;
+            }
+            button{
+                // border-color: rgb(0, 0, 0);
+                border: 2px solid rgb(0, 0, 0) !important;
+                span{
+                    color: rgb(0, 0, 0) !important; 
+                }
+                i{
+                    color: black !important;
+                }
+            }
+        }
+    }
+}

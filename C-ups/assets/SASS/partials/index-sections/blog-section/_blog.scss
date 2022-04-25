@@ -1,0 +1,127 @@
+#blog{
+    background-color: #F4F1EE;
+    .container {
+        .row{
+            .blog-header {
+                padding-top: 80px;
+                span{
+                    color: white;
+                    background: #C7A17A;
+                    font-family: "Jost", sans-serif;
+                    display: inline-block;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    padding: 1.5px 13px;
+                    letter-spacing: 2px;
+                    border-radius: 3px;
+                }
+                h2{
+                    line-height: 100px;
+                    font-size: 35px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-family: "Bebas Neue";
+                }
+            }
+            .learn-more{
+                padding-top: 140px;
+                float: right;
+                a{
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    letter-spacing: 2px;
+                    background: #C7A17A;
+                    padding: 12px 34px;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    position: relative;
+                    z-index: 1;
+                    display: inline-block;
+                    border: 1px solid #C7A17A;
+                    font-weight: 500;
+                }
+            }
+            .blog-item{
+                a{
+                    h3{
+                        text-decoration: none;
+                        color: black;
+                        display: inline-block;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            transform: scaleX(0);
+                            height: 2px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: #000000;
+                            transform-origin: bottom right;
+                            transition: transform 0.25s ease-out;
+                        }
+                        &:hover::after{
+                            transform: scaleX(1);
+                            transform-origin: bottom left;
+                        }
+                    }
+                }
+                
+                .blog-image{
+                    overflow: hidden;
+                    img{
+                        max-width: 100%;
+                        height: 260px;
+                        border-radius: 10px;
+                        transition: all 1s;
+                        
+                    }
+                }
+                .blog-title{
+                    padding: 25px;
+                    p{
+                        color: #6c6c6c;
+                        font-weight: 500;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        span{
+                            color: black;
+                        }
+                    }
+                    h3{
+                        text-transform: capitalize;
+                        font-size: 22px;
+                        font-family: "Jost", sans-serif;
+                    }
+                    .read-more{
+                        padding-top: 15px;
+                        a{
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            font-size: 15px;
+                            color: #a7a7a7;
+                            transition: all 1s;
+                            i{
+                                padding-left: 10px;
+                                transition: all 1s;
+                            }
+                            &:hover{
+                                color: #C7A17A;
+                                i{
+                                    color: #C7A17A;
+                                    transform:translateX(-10px)
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}

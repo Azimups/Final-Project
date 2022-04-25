@@ -1,0 +1,38 @@
+#about-us{
+    background-color: #CBE8F7;
+    .container{
+        max-width: 60%;
+        .row{
+            .about-text{
+                text-align: center;
+                h2{
+                    text-transform: uppercase;
+                    font-size: 50px;
+                    font-weight: 400;
+                    font-family: "Archer-Book";
+
+                }
+                &::before{
+                    display: block;
+                    content: '';
+                    width: 50px;
+                    height: 50px;
+                    background-size: contain;
+                    background-image: url(https://images.getbento.com/accounts/5ca2078a79c56e7928b7d8fd198fc585/media/images/49508illustration01.png);
+                    margin: 1rem auto;
+                }
+                p{
+                    font-family: "Archer_Light_Pro";
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: rgb(41, 41, 41);
+                    font-weight: 300;
+                    letter-spacing: -.5px;
+                    display: block;
+                    text-align: center;
+                    padding-top: 50px;
+                }
+            }
+        }
+    }
+}

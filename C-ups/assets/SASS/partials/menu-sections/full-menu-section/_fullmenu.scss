@@ -1,0 +1,71 @@
+#full-menu{
+    .container{
+        .row{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            h2{
+                color: var(--headerFontColor,#005f98);
+                font-family: var(--headerFontFamily);
+                font-style: normal;
+                font-weight: 700;
+                letter-spacing: 0;
+                text-transform: uppercase;
+                margin-bottom: 32px;
+                line-height: 1;
+                text-align: center;
+                padding-top: 80px;
+            }
+            .drink{
+                width: 288px !important;
+                text-align: center;
+                // flex-direction: row;
+                // flex-grow: unset;
+                // margin: 2px;
+                a{
+                    text-decoration: none;
+                }
+                .drink-image{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        transition: all 0.5s ease;
+                    }
+                    .frame{
+                        border: 1px solid #d7e6f8;
+                        border-radius: 15px;
+                        bottom:10px;
+                        height: 52%;
+                        position: absolute;
+                        width: 100%;
+                        z-index: -1;
+                    }
+                }
+                .drink-name{
+                    h3{
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color:#005f98;
+                        letter-spacing: 0;
+                        line-height: 24px;
+                        line-height: 1;
+                        text-transform: uppercase;
+                    }
+                }
+                &:hover {
+                    img{
+                        transform: scale(1.2);
+                        
+                    }
+                    .frame{
+                        border: 1px solid #005f98;
+                    }
+                }
+            }
+            
+        }
+    }
+}
