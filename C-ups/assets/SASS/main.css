@@ -210,6 +210,15 @@
     }
     }
     @media only screen and (max-width: 768px){
+      #about-intro .intro-content h1{
+        font-size: 42px !important;
+      } 
+      #reservation-area .shapes .left-shape{
+        display: none;
+      }
+      #reservation-area .shapes .right-shape{
+        display: none;
+      }
       #contact-area .shapes .left-shape{
         display: none;
       }
