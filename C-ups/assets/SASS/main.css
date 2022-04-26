@@ -98,7 +98,19 @@
     max-width: 1240px;
     margin: 0 auto;
     position: relative;
-    height: 1660px;
+    height: 4800px;
+}
+#contact-area .container{
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  height: 690px;
+}
+#contact-map .container{
+  max-width: 1480px;
+  margin: 0 auto;
+  position: relative;
+  height: 690px;
 }
   @media only screen and (max-width:1920px){
     .resp-left-side{
@@ -198,7 +210,15 @@
     }
     }
     @media only screen and (max-width: 768px){
-     
+      #contact-area .shapes .left-shape{
+        display: none;
+      }
+      #contact-area .shapes .right-shape{
+        display: none;
+      }
+     #blog-main-section .container{
+       height: 100%;
+     }
       #location-detail .container{
         height: 1090px;
       }

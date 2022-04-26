@@ -1931,4 +1931,124 @@
   background-color: #C7A17A;
   border-color: #C7A17A;
 }
+
+#contact-area .shapes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
+#contact-area .container {
+  margin-top: 50px;
+}
+
+#contact-area .container .row .contact-wrapper {
+  position: relative;
+  z-index: 2;
+  padding: 80px 75px;
+  border: 1px solid #E2DFDD;
+  background: #ffffff;
+}
+
+#contact-area .container .row .contact-wrapper .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+#contact-area .container .row .contact-wrapper .contact-info .info-icon {
+  max-width: 80px;
+  height: 70px;
+  border: 1px solid #E2DFDD;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+#contact-area .container .row .contact-wrapper .contact-info .contact-content .title {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+#contact-area .container .row .contact-wrapper .contact-info .contact-content a {
+  color: #737373;
+  font-size: 15px;
+  text-decoration: none;
+  line-height: 24px;
+}
+
+#contact-area .container .row .contact-wrapper .contact-info .contact-content p {
+  color: #737373;
+  font-size: 15px;
+}
+
+#contact-area .container .row .contact-wrapper .row .contact-form {
+  padding-top: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contact-area .container .row .contact-wrapper .row .contact-form .form-item {
+  padding-left: 18px;
+}
+
+#contact-area .container .row .contact-wrapper .row .contact-form .form-item input {
+  border: 1px solid #E2DFDD;
+  font-size: 15px;
+  padding: 12px 20px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+#contact-area .container .row .contact-wrapper .row .contact-form .subject {
+  padding-top: 40px;
+}
+
+#contact-area .container .row .contact-wrapper .row .contact-form .message {
+  padding-top: 40px;
+}
+
+#contact-area .container .row .contact-wrapper .row .contact-form .message input {
+  min-height: 160px;
+  border: 1px solid #E2DFDD;
+  font-size: 15px;
+  padding: 12px 20px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+#contact-area .container .row .contact-wrapper .row .contact-form button {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 2px;
+  background: #C7A17A;
+  padding: 10px 34px;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 1;
+  border: 1px solid #C7A17A;
+  font-weight: 500;
+}
+
+#contact-map {
+  padding-top: 54px;
+}
+
+#contact-map .col-lg-12 {
+  height: 100%;
+}
+
+#contact-map .map {
+  width: 100%;
+  height: 100%;
+}
 /*# sourceMappingURL=style.css.map */
