@@ -16,6 +16,7 @@
                 }
                 .left-side{
                     line-height:12px;
+                    z-index: 99999;
                     padding: 20px;
                     .page-header{
                         color: #ee5827;
@@ -73,6 +74,13 @@
                             &:hover{
                                 color: #ee5827;
                             }
+                            .search-button{
+                                border: 0;
+                                background:0;
+                                &:hover{
+                                    color: #ee5827;
+                                }
+                            }
                         }
                         .fa-shopping-cart{
                             span{
@@ -82,7 +90,7 @@
                             }
                         }
                     }
-                    button{
+                    .menu-button{
                         border: 2px solid rgb(0, 0, 0);
                         border-radius: 80px;
                         padding: 14px;
@@ -112,7 +120,7 @@
             *{
                 color: black;
             }
-            button{
+            .menu-button{
                 // border-color: rgb(0, 0, 0);
                 border: 2px solid rgb(0, 0, 0) !important;
                 span{

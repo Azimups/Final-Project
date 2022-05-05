@@ -13,6 +13,123 @@
 <body>
     <section id="intro">
         <div class="container">
+            <div class="register-header" id="register-header">
+                <div>
+                    <div class="change-form">
+                        <a class="change-form-login" id="change-form-login">Login</a>
+                        <a class="change-form-register" id="change-form-register">Register</a>
+                    </div>
+                    <div class="login-form-header" id="login-form-header">
+                        <div class="login-box">
+                            <form action="">
+                                <div class="login-email">
+                                    <input type="email" placeholder="Email">
+                                </div>
+                                <div class="login-password pt-3">
+                                    <input type="text" placeholder="Password">
+                                </div>
+                                <div class="actions-toolbar">
+                                    <div><a href=""><span>Forgot Your Password?</span></a></div>
+                                    <div><button type="submit"><span>Login</span></button></div>
+                                </div>
+                            </form>
+                        </div>
+                        <a class="closed-login" id="close-login-btn">Close</a>
+                    </div>
+                    <div class="register-form-header" id="register-form-header">
+                        <div class="register-box">
+                            <form action="">
+                                <div class="register-first-name">
+                                    <input type="name" placeholder="First Name">
+                                </div>
+                                <div class="register-last-name">
+                                    <input type="name" placeholder="Last Name">
+                                </div>
+                                <div class="register-email">
+                                    <input type="email" placeholder="Email">
+                                </div>
+                                <div class="register-password pt-3">
+                                    <input type="text" placeholder="Password">
+                                </div>
+                                <div class="register-password pt-3">
+                                    <input type="text" placeholder=" Repeat Password">
+                                </div>
+                                <div class="actions-toolbar">
+                                    <button type="submit">
+                                        Register
+                                    </button>
+                                </div>
+                                <a class="closed-login" id="close-register-btn">Close</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-popup" id="search-box">
+                <div class="search-form">
+                    <h3>What are you looking for?</h3>
+                    <form action="">
+                        <div class="input-search">
+                            <input type="text" class="search-input" placeholder="Search...">
+                            <button>
+                                <i class="fas fa-search pd"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="overlay-menu" id="overlay-menu">
+                <div class="left-side">
+                    <h1 class="page-header">C-ups</h1>
+                    <span class="page-header-text">Caffe</span>
+                </div>
+                <button class="overlay-close" id="overlay-close">Close</button>
+                <div class="menu-wrapper">
+                    <div class="menu-container">
+                        <ul>
+                            <li>
+                                <a href="/index.html">
+                                    Home Page
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/about.html">
+                                    About Us
+                                </a>
+                               </li>
+                            <li>
+                                <a href="/contact.html">
+                                    Contact
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/menu.html">
+                                    Full Menu
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/location.html">
+                                    Location
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/reservation.html">
+                                    Reservation
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="basket-box" id="basket-box">
+                <button id="close-box" class="close-box btn-close"><i class="close-cart pe-7s-close pa"></i></button>
+                <span class="no-item">You have no items in your shopping cart.</span>
+                <div class="empty-cart">
+                    <a class="action" href="">
+                        <span>Go to Shop</span>
+                    </a>
+                </div>
+            </div>
             <div class="row nav-bar" id="nav">
                 <div class="col-lg-12 d-flex">
                     <div class="left-side">
@@ -23,21 +140,27 @@
                         <i class="fas fa-bars">
                         </i>
                     </div>
-                    <div class="right-side">
+                    <div class="right-side" id="right-bar">
                         <ul>
                             <li>
-                                <i class="fas fa-search pd"></i>
+                                <button class="search-button" id="search-btn">
+                                    <i  class="fas fa-search pd"></i>
+                                </button>
                             </li>
                             <li>
-                                <i class="fas fa-user pd"></i>
+                                <button class="user-button" id="user-btn">
+                                    <i class="fas fa-user pd"></i>
+                                </button>
                             </li>
                             <li>
-                                <i class="fas fa-shopping-cart pd">
-                                     <span>0</span>
-                                </i>
+                                <button class="cart-button" id="cart-btn">
+                                    <i class="fas fa-shopping-cart pd">
+                                        <span>0</span>
+                                   </i>
+                                </button>
                             </li>
                             <li>
-                                <button>
+                                <button class="menu-button" id="menu-btn">
                                     <i class="fas fa-bars">
                                     </i>
                                     <span>menu</span>

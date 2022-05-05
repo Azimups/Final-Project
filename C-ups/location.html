@@ -13,6 +13,19 @@
 <body>
     <header class="header">
         <div class="row nav-bar" id="nav">
+            <div class="search-popup" id="search-box">
+                <div class="search-form">
+                    <h3>What are you looking for?</h3>
+                    <form action="">
+                        <div class="input-search">
+                            <input type="text" class="search-input" placeholder="Search...">
+                            <button>
+                                <i class="fas fa-search pd"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div class="col-lg-12 d-flex">
                 <a href="/index.html">
                     <div class="left-side">
@@ -27,7 +40,9 @@
                 <div class="right-side">
                     <ul>
                         <li>
-                            <i class="fas fa-search pd"></i>
+                            <button class="search-button" id="search-btn">
+                                <i class="fas fa-search pd"></i>
+                            </button>
                         </li>
                         <li>
                             <i class="fas fa-user pd"></i>
@@ -38,7 +53,7 @@
                             </i>
                         </li>
                         <li>
-                            <button>
+                            <button class="menu-button">
                                 <i class="fas fa-bars">
                                 </i>
                                 <span>menu</span>
