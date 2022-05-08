@@ -81,6 +81,22 @@
                                     color: #ee5827;
                                 }
                             }
+                            .user-button{
+                                border: 0;
+                                background:0;
+                                color: rgb(0, 0, 0);
+                                &:hover{
+                                    color: #ee5827;
+                                }
+                            }
+                        }
+                        .cart-button{
+                            border: 0;
+                            background:0;
+                            color: rgb(0, 0, 0);
+                            &:hover{
+                                color: #ee5827;
+                            }
                         }
                         .fa-shopping-cart{
                             span{

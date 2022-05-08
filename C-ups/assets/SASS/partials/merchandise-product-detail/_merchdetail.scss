@@ -1,0 +1,312 @@
+#merchandise-product-detail{
+    .container{
+        // overflow: hidden;
+        margin-top: 90px;
+        .row{
+            max-width: 100%;
+            max-height: 100%;
+            .col-lg-6{
+                max-height: 790px;
+            }
+            .product-detail-image{
+                display: flex;
+                .product-main-img{
+                    width: 495px;
+                    height: 100%;
+                    cursor: zoom-in;
+                    .image-wrapper{
+                        img{
+                            max-width: 90%;
+                            height: 100%;
+                        }
+                    }
+                    .image-wrapper-second{
+                        display:none;
+                    }
+                    .image-wrapper-third{
+                        display:none;
+                    }
+                }
+                .product-secondary-img{
+                    .product-thumbs{
+                        .product-thumb-item{
+                            width: 80px;
+                            height: 118px;
+                            .image-wrap{
+                                a{
+                                    img{
+                                        max-width: 100%;
+                                        max-height: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .product-single-title{
+              color: #535353;
+              font-weight: 400;
+              letter-spacing: 2px;
+              font-size: 48px;
+            }
+            .type-wrapper{
+                overflow: scroll;
+                max-height: 100%;
+                span{
+                    text-transform: uppercase;
+                    color: #535353;
+                    font-size: 24px;
+                   
+                }
+                .type-input{
+                   .oz{
+                    background-color: #245f9a;
+                    color: white;
+                    box-shadow: #245f9a;
+                   }
+                    input{
+                        overflow: hidden;
+                        position: absolute;
+                        height: 1px;
+                        width: 1px;
+                      
+                    }
+                    .ground-label{
+                        padding: 7px 15px 7px;
+                        margin: 0 8px 12px 0;
+                        font-style: normal;
+                        font-size: 17px;
+                        font-weight: 500;
+                        position: relative;
+                        display: inline-block;
+                        text-transform: none;
+                        line-height: 1.2;
+                        border: 1px solid grey;
+                    }
+                    label{
+                        cursor: pointer;
+                        padding: 7px 15px 7px;
+                        margin: 0 8px 12px 0;
+                        font-style: normal;
+                        font-size: 17px;
+                        font-weight: 500;
+                        position: relative;
+                        display: inline-block;
+                        text-transform: none;
+                        line-height: 1.2;
+                        border: 1px solid grey;
+                    }
+                }
+                .product-quantity{
+                    padding-top: 20px;
+                    span{
+                        text-transform: uppercase;
+                        color: #535353;
+                        font-size: 24px;
+                    }
+                    .quantity-wrapper{
+                        position: relative;
+                        max-width: 80px;
+                        min-width: 60px;
+                        color: #535353;
+                        background-color: white;
+                        input{
+                            display: block;
+                            background: none;
+                            text-align: center;
+                            width: 100%;
+                            padding: 5px 20px;
+                            margin: 0;
+                            z-index: 1;
+                            border: 1px solid;
+                            border-color:#e8e8e1;
+                        }
+                        .quantity-plus{
+                            right: 0;
+                            cursor: pointer;
+                            position: absolute;
+                            display: block;
+                            top: 0;
+                            bottom: 0;
+                            border: 0 none;
+                            background: none;
+                            text-align: center;
+                            overflow: hidden;
+                            padding: 0 10px;
+                            line-height: 1;
+                            transition: background-color 0.1s ease-out;
+                            z-index: 2;
+                        }
+                        button{
+                            cursor: pointer;
+                            position: absolute;
+                            display: block;
+                            top: 0;
+                            bottom: 0;
+                            border: 0 none;
+                            background: none;
+                            text-align: center;
+                            overflow: hidden;
+                            padding: 0 10px;
+                            line-height: 1;
+                            transition: background-color 0.1s ease-out;
+                            z-index: 2;
+                            svg{
+                                display: block;
+                                font-size: 8px;
+                                width: 10px;
+                                height: 10px;
+                                fill: inherit;
+                            }
+                            &:hover{
+                                background-color: #f2f2f2;;
+                            }
+                        }
+                    }
+                }
+                .payment-buttons{
+                    padding-top: 20px;
+                    .add-to-cart-btn{
+                        background-image: url(https://cdn.shopify.com/s/files/1/0718/6923/t/91/assets/button-arrow-black-2x.png);
+                        background: url(https://cdn.shopify.com/s/files/1/0718/6923/t/91/assets/button-arrow-black-2x.png) no-repeat 150% 25%;
+                        background-size: 29px;
+                        background-color: white;
+                        border: 1px solid;
+                        color: #535353;
+                        border-color: #535353;
+                        font-size: 16px;
+                        padding: 11px 20px;
+                        border-radius: 0;
+                        min-height: 50px;
+                        width: 100%;
+                        transition: all 0.5s ease;
+                        &:hover{
+                            background-position: 95% 35%;
+                            padding-right: 55px;
+                        }
+                    }
+                    .buy-it-now-btn{
+                        background-color: #245f9a;
+                        border: 1px solid;
+                        color: #ffffff;
+                        font-size: 16px;
+                        padding: 11px 20px;
+                        border-radius: 0;
+                        min-height: 50px;
+                        width: 100%;
+                        span{
+                            color: white;
+                        }
+                    }
+                }
+                .product-info{
+                    .small{
+                        span{
+                            font-size: 13px;
+                        }
+                    }
+                }
+                .product-tab{
+                    button{
+                        display: block;
+                        width: 100%;
+                        text-align: left;
+                        padding: 22.85714px 0;
+                        text-transform: uppercase;
+                        background: none;
+                        border: none;
+                        font-size: 24px;
+                        font-weight:400;
+                        color: #535353;
+                        position: relative;
+                        span{
+                            display: block;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            width: 12px;
+                            height: 12px;
+                            transform: translateY(-50%);
+                           
+                            svg{
+                                display: block;
+                                transition: all 0.2s ease-in;
+                                height: 12px;
+                                width: 12px;
+                            }
+                        }
+                    }
+                }
+                .product-content{
+                    overflow: hidden;
+                    opacity: 1;
+                    .form-box-top{
+                        gap: 20px;
+                        .name-input,.email-input{
+                            display: flex;
+                            flex-direction: column;
+                            width: 50%;
+                            input{
+                                width: 100%;
+                                padding: 8px 10px;
+                                border: 1px solid;
+                                border-color: #e8e8e1;
+                                outline: none;
+                            }
+                        }
+                    }
+                    .form-box-bottom{
+                        padding-top: 30px;
+                        .message-input{
+                            input{
+                                width: 100%;
+                                padding: 8px 10px;
+                                border: 1px solid;
+                                border-color: #e8e8e1;
+                                outline: none;
+                                min-height: 100px;
+                            }
+                        }
+                        button{
+                            padding: 11px 20px;
+                            margin: 0;
+                            width: auto;
+                            min-width: 90px;
+                            line-height: 1.42;
+                            font-size: 16px;
+                            text-decoration: none;
+                            text-align: center;
+                            vertical-align: middle;
+                            white-space: normal;
+                            cursor: pointer;
+                            color: white;
+                            border: 1px solid transparent;
+                            background-image: url(https://cdn.shopify.com/s/files/1/0718/6923/t/91/assets/button-arrow-2x.png);
+                            background: #245f9a url(https://cdn.shopify.com/s/files/1/0718/6923/t/91/assets/button-arrow-2x.png) no-repeat 150% 35%;
+                            background-size: 29px;
+                            transition: all 0.5s ease;
+                            &:hover{
+                                padding-right: 55px;
+                                background-position: 91% 35%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.transition-main-img{
+    opacity: 0;
+}
+.open-product-content{
+    visibility: visible !important;
+    opacity: 1;
+    height: 100% !important;
+}
+.label-active{
+    background-color: #245f9a;
+    color: white;
+    box-shadow: #245f9a;
+}

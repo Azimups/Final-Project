@@ -10,6 +10,7 @@ window.addEventListener("scroll",function(){
 const searchPopup = document.getElementById('search-box');
 const searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener("click",function(){
+    console.log("s");
     searchPopup.classList.toggle("search-active");
     navbar.classList.add("nav-black");
     registerHeader.classList.remove("register-active")
@@ -67,12 +68,12 @@ openMenuBtn.addEventListener("click",function() {
     navbar.classList.add("nav-black");
     changeLoginHeader.classList.add("register-active")
     changeRegisterHeader.classList.remove("register-active");
-    navbar.style.display="none";
+    RightBar.style.display = "none";
 })
 const overlayCloseBtn = document.getElementById('overlay-close')
 overlayCloseBtn.addEventListener("click", function(){
     overlayMenu.classList.remove("menu-opened")
-    navbar.style.display="block";
+    RightBar.style.display = "block";
     navbar.classList.remove("nav-black");
 })
 const RightBar = document.getElementById('right-bar')
@@ -90,3 +91,54 @@ closeCardBtn.addEventListener("click",function() {
     RightBar.style.display = "block";
     $("body").css("overflow", "visible");
 })
+
+// const openInfoBtn = document.getElementById('open-info-btn')
+// const productContent = document.getElementById('product-content')
+// openInfoBtn.addEventListener("click",function(){
+//     productContent.classList.toggle("open-product-content")
+// })
+
+$(document).ready(function(){
+    $("#product-content").hide();
+});
+$("#open-info-btn").click(function(){
+    $("#product-content").toggle("slow")
+    console.log("s");
+})
+$("#open-question-btn").click(function(){
+    $("#product-question").toggle("slow")
+})
+
+// function changeImage(res) {
+//     console.log(res);
+//     document.getElementById('img').src=res.src;
+// }
+const groundImgLittle = document.getElementById('ground-img')
+const groundImgBig = document.getElementById('ground-img-big')
+const mainImg = document.getElementById('main-img')
+groundImgLittle.addEventListener("click",function() {
+    mainImg.src=groundImgBig.src;
+    groundImgLittle.style.border = "1px solid black"
+    beanImg.style.border = "none"
+})
+const beanImg = document.getElementById('bean-img-little')
+const beanImgBig = document.getElementById('bean-img-big')
+beanImg.addEventListener("click",function() {
+    mainImg.src = beanImgBig.src;
+    beanImg.style.border = "1px solid black"
+    groundImgLittle.style.border = "none"
+})
+
+const beanChangeBtn = document.getElementById('bean-change-btn')
+const groundChangeBtn = document.getElementById('ground-change-btn')
+beanChangeBtn.addEventListener("click",function() {
+    mainImg.src = beanImgBig.src;
+    beanChangeBtn.classList.add("label-active")
+    groundChangeBtn.classList.remove("label-active")
+})
+groundChangeBtn.addEventListener("click",function(){
+    mainImg.src=groundImgBig.src;
+    groundChangeBtn.classList.add("label-active")
+    beanChangeBtn.classList.remove("label-active")
+})
+

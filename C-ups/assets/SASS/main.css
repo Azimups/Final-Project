@@ -112,6 +112,18 @@
   position: relative;
   height: 690px;
 }
+#merchadnise-products .container{
+  max-width: 1380px;
+  margin: 0 auto;
+  position: relative;
+  height: 990px;
+}
+#merchandise-product-detail .container{
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: 990px;
+}
   @media only screen and (max-width:1920px){
     .resp-left-side{
       display: none;
