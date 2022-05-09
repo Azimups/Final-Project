@@ -48,11 +48,15 @@ changeRegisterBtn.addEventListener("click",function() {
     changeRegisterHeader.classList.add("register-active");
     navbar.classList.add("nav-black");
     changeLoginHeader.classList.remove("register-active")
+    changeRegisterBtn.style.color="#ee5827";
+    changeLoginBtn.style.color="#999";
 })
 changeLoginBtn.addEventListener("click", function(){
     changeLoginHeader.classList.add("register-active")
     changeRegisterHeader.classList.remove("register-active");
     navbar.classList.add("nav-black");
+    changeLoginBtn.style.color="#ee5827";
+    changeRegisterBtn.style.color="#999";
 })
 const closeRegisterBtn = document.getElementById('close-register-btn');
 closeRegisterBtn.addEventListener("click", function(){
@@ -84,20 +88,12 @@ cardBtn.addEventListener("click",function(){
     RightBar.style.display = "none";
     $("body").css("overflow", "hidden");
 })
-
 const closeCardBtn = document.getElementById('close-box')
 closeCardBtn.addEventListener("click",function() {
     BasketBox.classList.remove("basket-opened");
     RightBar.style.display = "block";
     $("body").css("overflow", "visible");
 })
-
-// const openInfoBtn = document.getElementById('open-info-btn')
-// const productContent = document.getElementById('product-content')
-// openInfoBtn.addEventListener("click",function(){
-//     productContent.classList.toggle("open-product-content")
-// })
-
 $(document).ready(function(){
     $("#product-content").hide();
 });
@@ -109,10 +105,6 @@ $("#open-question-btn").click(function(){
     $("#product-question").toggle("slow")
 })
 
-// function changeImage(res) {
-//     console.log(res);
-//     document.getElementById('img').src=res.src;
-// }
 const groundImgLittle = document.getElementById('ground-img')
 const groundImgBig = document.getElementById('ground-img-big')
 const mainImg = document.getElementById('main-img')
@@ -128,7 +120,6 @@ beanImg.addEventListener("click",function() {
     beanImg.style.border = "1px solid black"
     groundImgLittle.style.border = "none"
 })
-
 const beanChangeBtn = document.getElementById('bean-change-btn')
 const groundChangeBtn = document.getElementById('ground-change-btn')
 beanChangeBtn.addEventListener("click",function() {

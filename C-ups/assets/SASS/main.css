@@ -124,6 +124,18 @@
   position: relative;
   height: 990px;
 }
+#menu-products .container{
+  max-width: 1480px;
+  margin: 0 auto;
+  position: relative;
+  height: 990px;
+}
+#menu-product-detail .container{
+  max-width: 918px;
+  margin: 0 auto;
+  position: relative;
+  height: 990px;
+}
   @media only screen and (max-width:1920px){
     .resp-left-side{
       display: none;
@@ -222,6 +234,16 @@
     }
     }
     @media only screen and (max-width: 768px){
+      #menu-product-detail .container{
+        text-align: center;
+        height: 100%;
+      }
+      #menu-product-detail .container .detail-image-wrapper img{
+        max-width: 100%;
+      }
+      #merchandise-product-detail .container{
+        height: 100%;
+      }
       #about-intro .intro-content h1{
         font-size: 42px !important;
       } 

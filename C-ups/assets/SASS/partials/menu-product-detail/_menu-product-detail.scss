@@ -1,0 +1,136 @@
+#menu-product-detail{
+    .drink-menu-back{
+        margin-left: 20px;
+        a{
+            text-decoration: none;
+            cursor: pointer;
+            color:#005f98;
+            font-size: 17px;
+            font-weight: 600;
+            svg{
+                margin-right: 5px;
+                margin-bottom: 2px;
+            }
+         } 
+   }
+    .container{
+        .row{
+            .drink-summary {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                
+            }
+            .detail-content-wrapper{
+                padding-top: 120px;
+                .drink-title{
+                    color: #005f98;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 12px;
+                    line-height: 1;
+                    position: relative;
+                    font-size: 35px;
+                }
+                .sub-title{
+                    font-weight: 500;
+                    line-height: 2.23;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    color: #005f98;
+                }
+                .drink-description{
+                    font-size: 16px;
+                    font-style: normal;
+                    letter-spacing: 0;
+                    font-weight: 400;
+                    color: #005f98;
+                    padding-top: 20px;
+                }
+                .drink-types{
+                    display: flex;
+                    .drink-type{
+                        font-size: 20px;
+                        margin-right: 16px;
+                        padding: 10px;
+                        padding-top: 12px;
+                        border-radius: 10px;
+                        font-weight: 700;
+                        height: 56px;
+                        width: 112px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        // width: 100%;
+                        transition: all .2s;
+                        background: #d7e6f8;
+                        color: #154167;
+                    }
+                }
+            }
+            .nutrition-info {
+                border: 1px solid #d7e6f8;
+                width: 100%;
+                padding: 15px;
+                border-radius: 15px;
+                h3{
+                    font-size: 1.5rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #005f98;
+                    font-weight: 700;
+                }
+                .recipe{
+                    display: none;
+                    .nutrition-table{
+                        .table-header{
+                            padding: 12px;
+                            p{
+                                font-size: 20px;
+                                flex-basis: 25%;
+                                font-weight: 400;
+                                color: #005f98;
+                                width: 70px;
+                                margin: 0 0 0 auto;
+                                text-align: center;
+                            }
+                        }
+                        .table-row{
+                            border-bottom: 2px solid #d7e6f8;
+                            margin-left: 12px;
+                            margin-right: 12px;
+                            padding: 12px;
+                            display: flex;
+                            line-height: 1;
+                            justify-content: space-between;
+                            p{
+                                font-size: 18px;
+                                text-transform: none;
+                                font-weight: 400;
+                                color: #005f98;
+                                width: 70px;
+                                margin: 0 0 0 auto;
+                                text-align: center;
+                                flex-basis: 25%;
+    
+                            }
+                            &:last-child{
+                                border-bottom:0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.type-active{
+    background: #154167 !important;
+    color: #fff !important;
+    cursor: pointer !important;
+}
+.recipe-active{
+    display: block !important;
+}
+#hidden-image-kicker, #hidden-image-blended,#hidden-image-iced{
+    display: none;
+}
