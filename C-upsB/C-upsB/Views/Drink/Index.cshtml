@@ -1,0 +1,85 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+    <section id="menu-products">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="drink-menu-back">
+                    <a href="/menu.html"><svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.25879 1.5L0.258789 9.5L8.25879 17.5" stroke="#265E94" stroke-width="3" stroke-linecap="round"></path>
+                    </svg>
+                    Full menu</a>
+                </div>
+                <div class="product-header-title">
+                    <h1>Dutch Classics<sup>®</sup></h1>
+                    <p>Our favorites, guaranteed to satisfy.</p>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <a href="/menu-product-detail.html">
+                            <div class="drink-product">
+                                <div class="drink-details">
+                                    <h3 class="drink-name">
+                                        Kicker<sup>®</sup>
+                                    </h3>
+                                    <div class="drink-description">
+                                        Irish Cream Breve
+                                    </div>
+                                    <span>
+                                        $ 15.95
+                                    </span>
+                                </div>
+                                <div class="drink-product-image">
+                                    <img src="~/images/Iced_Kicker_HERO.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <a href="">
+                            <div class="drink-product">
+                                <div class="drink-details">
+                                    <h3 class="drink-name">
+                                        Caramelizer<sup>®</sup>
+                                    </h3>
+                                    <div class="drink-description">
+                                        Caramel Mocha
+                                    </div>
+                                    <span>
+                                        $ 15.95
+                                    </span>
+                                </div>
+                                <div class="drink-product-image">
+                                    <img src="~/images/Iced_Caramelizer_HERO.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <a href="">
+                            <div class="drink-product">
+                                <div class="drink-details">
+                                    <h3 class="drink-name">
+                                        Annihilator<sup>®</sup>
+                                    </h3>
+                                    <div class="drink-description">
+                                        Chocolate Macadamia Nut Breve
+                                    </div>
+                                    <span>
+                                        $ 15.95
+                                    </span>
+                                </div>
+                                <div class="drink-product-image">
+                                    <img src="~/images/Iced_Annihilator_HERO.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </section>

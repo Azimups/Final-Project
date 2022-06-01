@@ -1,0 +1,55 @@
+@using C_upsB.ViewModels
+@model dynamic
+
+@{
+    HomeViewModel homeViewModel = Model;
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<section id="about-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-content">
+                        <h1>@homeViewModel.AboutDetails.IntroContent</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text">
+                        <h2>
+                            @homeViewModel.AboutDetails.AboutHeader
+                        </h2>
+                        <p>
+                            @homeViewModel.AboutDetails.AboutTitle
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="story">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 left-part">
+                    <div class="story-image">
+                        <img src="@homeViewModel.AboutDetails.FounderImage" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6  col-md-12 right-part">
+                    <div class="story-content">
+                        <h2>A Founder's Story</h2>
+                        <p>@homeViewModel.AboutDetails.FounderStory</p>
+                        <p>In 2020, Hoover was nominated for Restaurateur of the Year by the James Beard Foundation for the sixth time; </p>
+                        <a href="mailto: maddy@cafepatachou.com" class="btn btn-brand" target="_blank" rel="noopener">Book Martha for a Speaking Engagement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

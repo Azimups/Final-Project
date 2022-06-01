@@ -1,0 +1,248 @@
+﻿@using C_upsB.ViewModels
+@{
+    HomeViewModel homeViewModel = Model;
+    ViewData["Title"] = "Home Page";
+}
+    <section id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 test">
+                    <div class="title">
+                        <h1>@homeViewModel.Stylish.FirstHeader<br>@homeViewModel.Stylish.SecondHeader</h1>
+                        <h2>@homeViewModel.Stylish.ThirdHeader</h2>
+                    </div>
+                    <div class="image">
+                        <img src="~/images/@homeViewModel.Stylish.Image" alt="intro-img">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="video" data-aos="fade-left" class="aos-init aos-animate">
+                        <video loop="" muted="" autoplay="" playsinline="" class="hero--video-element" poster="https://www.mokarico.com/pub/static/version1634728612/frontend/Mgs/unero_child/en_GB/video/mokarico--video.jpg">
+                            <source src="https://www.mokarico.com/pub/static/version1634728612/frontend/Mgs/unero_child/en_GB/video/mokarico--video.mp4" type="video/mp4">
+                            <source src="https://www.mokarico.com/pub/static/version1634728612/frontend/Mgs/unero_child/en_GB/video/mokarico--video.mov" type="video/mov">
+                            <source src="https://www.mokarico.com/pub/static/version1634728612/frontend/Mgs/unero_child/en_GB/video/mokarico--video.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <ul class="links">
+                        <li>
+                            <a href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container reveal">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-images">
+                        <img  class="chef-img" src="~/images/@homeViewModel.AboutImages.AboutMainImage" alt="coffe">
+                        <img class="coffe-img" src="~/images/@homeViewModel.AboutImages.AboutLittleImage" alt="chef">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-title">
+                        <span>@homeViewModel.AboutTexts.PreHeader</span>
+                        <h2>@homeViewModel.AboutTexts.MainHeader</h2>
+                        <p>@homeViewModel.AboutTexts.AboutTextFirst</p>
+                        <p>@homeViewModel.AboutTexts.AboutTextSecond</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="menu">
+        <div class="container reveal">
+            <div class="row">
+                <div class="header-text">
+                    <h2>What We Love</h2>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <a href="">
+                        <div class="category">
+                            <img src="~/images/homepage_menu_tile_classics.webp" alt="product">
+                            <h2>Classics</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <a href="">
+                        <div class="category">
+                            <img src="~/images/homepage_drink_tile_rebel_2.webp" alt="product">
+                            <h2>Rebel™</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <a href="">
+                        <div class="category">
+                            <img src="~/images/homepage_menu_tile_cold brew.webp" alt="product">
+                            <h2>Cold Brew</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="see-full-menu">
+                    <a asp-controller="Category" asp-action="Index">
+                        see full menu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="location">
+        <div class="container reveal">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="location-text">
+                        <h2>Locations</h2>
+                        <p>C-ups has 5 branches, four are located in Baku and one is located in Azerbaijan.</p>
+                        <a asp-controller="Location" asp-action="Index">
+                            All Locations
+                            <i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="location-image">
+                        <div class="image">
+                            <img src="~/images/dutch_bros_coffee_sacramento-770x360.jpeg" alt="location image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blog">
+        <div class="container reveal">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog-header">
+                        <span>News & Blog</span>
+                        <h2>Latest news & Blog</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="learn-more">
+                        <a href="">
+                            learn more
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="blog-item">
+                        <div class="blog-image">
+                            <img src="~/images/blog-2-1.jpeg" alt="">
+                        </div>
+                        <div class="blog-title">
+                            <p><span>By: </span> Rasalina</p>
+                            <a href="/blog-detail.html">
+                                <h3>Questions business must be able to answers</h3>
+                            </a>
+                            <div class="read-more">
+                                <a href="/blog-detail.html">
+                                    read more
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="blog-item">
+                        <div class="blog-image">
+                            <img src="~/images/blog-2-2.jpeg" width="100%" alt="">
+                        </div>
+                        <div class="blog-title">
+                            <p><span>By: </span> Rasalina</p>
+                            <a href="/blog-detail.html">
+                                <h3>Questions business must be able to answers</h3>
+                            </a>
+                            <div class="read-more">
+                                <a href="/blog-detail.html">
+                                    read more
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="blog-item">
+                        <div class="blog-image">
+                            <img src="~/images/blog-2-3.jpeg" alt="">
+                        </div>
+                        <div class="blog-title">
+                            <p><span>By: </span> Rasalina</p>
+                            <a href="/blog-detail.html">
+                                <h3>Questions business must be able to answers</h3>
+                            </a>
+                            <div class="read-more">
+                                <a href="/blog-detail.html">
+                                    read more
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="merchandise">
+        <div class="container reveal">
+            <div class="row">
+                <div class="header-text">
+                    <h2>Merchandise</h2>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <a href="">
+                        <div class="category">
+                            <img src="https://cdn.shopify.com/s/files/1/0718/6923/products/StainlessSteelTumbler-Waves_f48f9214-2769-43d7-8888-6f6ab3cbb2ea_1080x.png?v=1622704953" alt="product">
+                            <h2>Waves</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <a href="">
+                        <div class="category">
+                            <img src="https://cdn.shopify.com/s/files/1/0718/6923/products/IdahoStateMug_1080x.png?v=1628014118" alt="product">
+                            <h2>Idaho</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <a href="">
+                        <div class="category">
+                            <img src="https://cdn.shopify.com/s/files/1/0718/6923/products/ColoradoStateMug_1080x.png?v=1628014100" alt="product">
+                            <h2>Colarado</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="see-full-menu">
+                    <a href="/merchandise-menu.html">
+                        see full menu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
