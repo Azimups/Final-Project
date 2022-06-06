@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Threading.Tasks;
 using C_upsB.DataAccesLayer;
 using C_upsB.ViewModels;
@@ -20,7 +21,7 @@ namespace C_upsB.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var categories = await _dbContext.Categories.ToListAsync();
+            var categories = await _dbContext.Categories.Where(x=>x.IsDeleted==false).Skip(3).ToListAsync();
             return View( new HomeViewModel
             {
                 Categories = categories,

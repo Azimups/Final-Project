@@ -17,5 +17,7 @@ namespace C_upsB.ViewModels
         public List<Blog> Blogs { get; set; }
 
         public List<BlogRelated> BlogRelateds { get; set; }
+
+        public List<Merchandise> Merchandises { get; set; }
     }
 }

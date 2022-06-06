@@ -1,0 +1,42 @@
+@model System.Collections.Generic.List<C_upsB.Models.Merchandise>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<section id="merchandise-products">
+        <div class="container">
+            <div class="row">
+                <h1 class="section-header">
+                    Products
+                </h1>
+                <div class="filter-area">
+                    <button type="button">
+                        <i class="fa-solid fa-sliders-simple"></i>
+                        Filter
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-item">
+                            <a asp-controller="Merchandise" asp-action="Detail" asp-route-id="@item.Id">
+                                <div class="product-image">
+                                    <img src="~/images/@item.Image" alt="product-image">
+                                </div>
+                                <div class="product-content">
+                                    <p>@item.Name</p>
+                                    <span>
+                                       @item.Price
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+</section>

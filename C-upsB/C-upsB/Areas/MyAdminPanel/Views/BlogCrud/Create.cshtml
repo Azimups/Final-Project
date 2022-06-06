@@ -1,0 +1,81 @@
+@model Blog
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+<h2>Blog</h2>
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Blog</h4>
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="Name">Name</label>
+                        <input class="form-control" placeholder="Name" asp-for="Name">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Questions">Questions</label>
+                        <input class="form-control" placeholder="Questions" asp-for="Questions">
+                        <span asp-validation-for="Questions" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Photo">Photo</label>
+                        <input class="form-control" placeholder="Photo" asp-for="Photo">
+                        <span asp-validation-for="Photo" class="text-danger"></span>
+                    </div> 
+                    <div class="form-group">
+                        <label asp-for="ContentHeader">ContentHeader</label>
+                        <input class="form-control" placeholder="ContentHeader" asp-for="ContentHeader">
+                        <span asp-validation-for="ContentHeader" class="text-danger"></span>
+                    </div><div class="form-group">
+                        <label asp-for="TitleFirst">TitleFirst</label>
+                        <input class="form-control" placeholder="TitleFirst" asp-for="TitleFirst">
+                        <span asp-validation-for="TitleFirst" class="text-danger"></span>
+                    </div><div class="form-group">
+                        <label asp-for="TitleSecond">TitleSecond</label>
+                        <input class="form-control" placeholder="TitleSecond" asp-for="TitleSecond">
+                        <span asp-validation-for="TitleSecond" class="text-danger"></span>
+                    </div><div class="form-group">
+                        <label asp-for="TitleThird">TitleThird</label>
+                        <input class="form-control" placeholder="TitleThird" asp-for="TitleThird">
+                        <span asp-validation-for="TitleThird" class="text-danger"></span>
+                    </div><div class="form-group">
+                        <label asp-for="ContentHeaderTwo">ContentHeaderTwo</label>
+                        <input class="form-control" placeholder="ContentHeaderTwo" asp-for="ContentHeaderTwo">
+                        <span asp-validation-for="ContentHeaderTwo" class="text-danger"></span>
+                    </div><div class="form-group">
+                        <label asp-for="TitleFourth">TitleFourth</label>
+                        <input class="form-control" placeholder="TitleFourth" asp-for="TitleFourth">
+                        <span asp-validation-for="TitleFourth" class="text-danger"></span>
+                    </div><div class="form-group">
+                        <label asp-for="TitleFifth">TitleFifth</label>
+                        <input class="form-control" placeholder="TitleFifth" asp-for="TitleFifth">
+                        <span asp-validation-for="TitleFifth" class="text-danger"></span>
+                    </div><div class="form-group">
+                        <label asp-for="ContentHeaderThird">ContentHeaderThird</label>
+                        <input class="form-control" placeholder="ContentHeaderThird" asp-for="ContentHeaderThird">
+                        <span asp-validation-for="ContentHeaderThird" class="text-danger"></span>
+                    </div><div class="form-group">
+                        <label asp-for="TitleSix">TitleSix</label>
+                        <input class="form-control" placeholder="TitleSix" asp-for="TitleSix">
+                        <span asp-validation-for="TitleSix" class="text-danger"></span>
+                    </div><div class="form-group">
+                        <label asp-for="TitleSeven">TitleSeven</label>
+                        <input class="form-control" placeholder="TitleSeven" asp-for="TitleSeven">
+                        <span asp-validation-for="TitleSeven" class="text-danger"></span>
+                    </div><div class="form-group">
+                        <label asp-for="TitleEight">TitleEight</label>
+                        <input class="form-control" placeholder="TitleEight" asp-for="TitleEight">
+                        <span asp-validation-for="TitleEight" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a class="btn btn-light" asp-controller="BlogCrud" asp-action="Index">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

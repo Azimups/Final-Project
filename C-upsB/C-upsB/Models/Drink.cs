@@ -1,3 +1,7 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Http;
+
 namespace C_upsB.Models
 {
     public class Drink
@@ -5,8 +9,10 @@ namespace C_upsB.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string SubTitle { get; set; }
+
+        public string Image { get; set; }
         public double price { get; set; }
-        public double Description { get; set; }
+        public string Description { get; set; }
         public string TypeFirst { get; set; }
         public string TypeSecond { get; set; }
         public string TypeThird { get; set; }
@@ -58,6 +64,9 @@ namespace C_upsB.Models
         public int CategoryId { get; set; }
         public Category Category { get; set; }
         
+        
+        [NotMapped] public IFormFile Photo { get; set; }
+        public Boolean IsDeleted { get; set; }
 
     }
 }

@@ -1,0 +1,40 @@
+@model List<C_upsB.Models.Drink>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+<a class="btn btn-primary" asp-controller="DrinkCrud" asp-action="Create">Create</a>
+<div class="row">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Drink Name</th>
+                    <th>Drink Description</th>
+                    <th>Drink Price</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>@item.SubTitle</td>
+                        <td>$@item.price</td>
+                        @* <td> <img src="~/images/@item.Image" alt="product" width="100px" height="100px"></td> *@
+                        <td>
+                            <a class="btn btn-warning" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            <a class="btn btn-success" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

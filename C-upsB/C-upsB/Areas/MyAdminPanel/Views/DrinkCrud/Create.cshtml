@@ -1,0 +1,155 @@
+@model Drink
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Category</h4>
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="Title">Titleame</label>
+                        <input class="form-control" placeholder="Title" asp-for="Title">
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="price">price</label>
+                        <input class="form-control" placeholder="price" asp-for="price">
+                        <span asp-validation-for="price" class="text-danger"></span>
+                    </div>
+                        <div class="form-group">
+                            <label asp-for="SubTitle">SubTitle</label>
+                            <input class="form-control" placeholder="SubTitle" asp-for="SubTitle">
+                            <span asp-validation-for="SubTitle" class="text-danger"></span>
+                        </div> 
+                        <div class="form-group">
+                            <label asp-for="Photo">Photo</label>
+                            <input class="form-control" placeholder="Photo" asp-for="Photo">
+                            <span asp-validation-for="Photo" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="Description">Description</label>
+                            <input class="form-control" placeholder="Description" asp-for="Description">
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeLCalories">SizeLCalories</label>
+                            <input class="form-control" placeholder="SizeLCalories" asp-for="SizeLCalories">
+                            <span asp-validation-for="SizeLCalories" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeLTotalFat">SizeLTotalFat</label>
+                            <input class="form-control" placeholder="SizeLTotalFat" asp-for="SizeLTotalFat">
+                            <span asp-validation-for="SizeLTotalFat" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeLCholesterol">SizeLCholesterol</label>
+                            <input class="form-control" placeholder="SizeLCholesterol" asp-for="SizeLCholesterol">
+                            <span asp-validation-for="SizeLCholesterol" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeLSodium">SizeLSodium</label>
+                            <input class="form-control" placeholder="SizeLSodium" asp-for="SizeLSodium">
+                            <span asp-validation-for="SizeLSodium" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeLTotalCarbs">SizeLTotalCarbs</label>
+                            <input class="form-control" placeholder="SizeLTotalCarbs" asp-for="SizeLTotalCarbs">
+                            <span asp-validation-for="SizeLTotalCarbs" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeLTotalFiber">SizeLTotalFiber</label>
+                            <input class="form-control" placeholder="SizeLTotalFiber" asp-for="SizeLTotalFiber">
+                            <span asp-validation-for="SizeLTotalFiber" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeLTotalSugar">SizeLTotalSugar</label>
+                            <input class="form-control" placeholder="SizeLTotalSugar" asp-for="SizeLTotalSugar">
+                            <span asp-validation-for="SizeLTotalSugar" class="text-danger"></span>
+                    </div> 
+                    <div class="form-group">
+                            <label asp-for="SizeLTotalProtein">SizeLTotalProtein</label>
+                            <input class="form-control" placeholder="SizeLTotalProtein" asp-for="SizeLTotalProtein">
+                            <span asp-validation-for="SizeLTotalProtein" class="text-danger"></span>
+                    </div> 
+                    <div class="form-group">
+                            <label asp-for="SizeMCalories">SizeMCalories</label>
+                            <input class="form-control" placeholder="SizeMCalories" asp-for="SizeMCalories">
+                            <span asp-validation-for="SizeMCalories" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeMTotalFat">SizeMTotalFat</label>
+                            <input class="form-control" placeholder="SizeMTotalFat" asp-for="SizeMTotalFat">
+                            <span asp-validation-for="SizeMTotalFat" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeMCholesterol">SizeMCholesterol</label>
+                            <input class="form-control" placeholder="SizeMCholesterol" asp-for="SizeMCholesterol">
+                            <span asp-validation-for="SizeMCholesterol" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeMSodium">SizeMSodium</label>
+                            <input class="form-control" placeholder="SizeMSodium" asp-for="SizeMSodium">
+                            <span asp-validation-for="SizeMSodium" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeMTotalCarbs">SizeMTotalCarbs</label>
+                            <input class="form-control" placeholder="SizeMTotalCarbs" asp-for="SizeMTotalCarbs">
+                            <span asp-validation-for="SizeMTotalCarbs" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeMTotalFiber">SizeMTotalFiber</label>
+                            <input class="form-control" placeholder="SizeMTotalFiber" asp-for="SizeMTotalFiber">
+                            <span asp-validation-for="SizeMTotalFiber" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeMTotalSugar">SizeMTotalSugar</label>
+                            <input class="form-control" placeholder="SizeMTotalSugar" asp-for="SizeMTotalSugar">
+                            <span asp-validation-for="SizeMTotalSugar" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeMTotalProtein">SizeMTotalProtein</label>
+                            <input class="form-control" placeholder="SizeMTotalProtein" asp-for="SizeMTotalProtein">
+                            <span asp-validation-for="SizeMTotalProtein" class="text-danger"></span>
+                    </div> 
+                    
+                    
+                    <div class="form-group">
+                            <label asp-for="SizeSCalories">SizeSCalories</label>
+                            <input class="form-control" placeholder="SizeSCalories" asp-for="SizeSCalories">
+                            <span asp-validation-for="SizeSCalories" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeSTotalFat">SizeSTotalFat</label>
+                            <input class="form-control" placeholder="SizeSTotalFat" asp-for="SizeSTotalFat">
+                            <span asp-validation-for="SizeSTotalFat" class="text-danger"></span>
+                        </div> <div class="form-group">
+                            <label asp-for="SizeSCholesterol">SizeSCholesterol</label>
+                            <input class="form-control" placeholder="SizeSCholesterol" asp-for="SizeSCholesterol">
+                            <span asp-validation-for="SizeSCholesterol" class="text-danger"></span>
+                        </div><div class="form-group">
+                            <label asp-for="SizeSSodium">SizeSSodium</label>
+                            <input class="form-control" placeholder="SizeSSodium" asp-for="SizeSSodium">
+                            <span asp-validation-for="SizeSSodium" class="text-danger"></span>
+                        </div><div class="form-group">
+                            <label asp-for="SizeSTotalCarbs">SizeSTotalCarbs</label>
+                            <input class="form-control" placeholder="SizeSTotalCarbs" asp-for="SizeSTotalCarbs">
+                            <span asp-validation-for="SizeSTotalCarbs" class="text-danger"></span>
+                        </div><div class="form-group">
+                            <label asp-for="SizeSTotalFiber">SizeSTotalFiber</label>
+                            <input class="form-control" placeholder="SizeSTotalFiber" asp-for="SizeSTotalFiber">
+                            <span asp-validation-for="SizeSTotalFiber" class="text-danger"></span>
+                        </div><div class="form-group">
+                            <label asp-for="SizeSTotalSugar">SizeSTotalSugar</label>
+                            <input class="form-control" placeholder="SizeSTotalSugar" asp-for="SizeSTotalSugar">
+                            <span asp-validation-for="SizeSTotalSugar" class="text-danger"></span>
+                        </div><div class="form-group">
+                            <label asp-for="SizeSTotalProtein">SizeSTotalProtein</label>
+                            <input class="form-control" placeholder="SizeSTotalProtein" asp-for="SizeSTotalProtein">
+                            <span asp-validation-for="SizeSTotalProtein" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select class="form-control" name="CategoryId">
+                                <option value="0">Select Category</option>
+                                @foreach (var item in ViewBag.Categories)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a class="btn btn-light" asp-controller="DrinkCrud" asp-action="Index">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

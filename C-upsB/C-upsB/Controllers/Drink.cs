@@ -1,8 +1,11 @@
+using System.Linq;
 using System.Threading.Tasks;
 using C_upsB.DataAccesLayer;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
+using C_upsB.Models;
+using C_upsB.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace C_upsB.Controllers
 {
@@ -17,9 +20,26 @@ namespace C_upsB.Controllers
             _dbContext = dbContext;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            return View();
+            var drinks = await _dbContext.Drinks.Where(x => x.IsDeleted == false).Where(x=>x.CategoryId==id).ToListAsync();
+            return View(drinks);
+        }
+
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id==null)
+            {
+                return NotFound();
+            }
+
+            var drink = await _dbContext.Drinks.FindAsync(id);
+            if (drink==null)
+            {
+                return NotFound();
+            }
+
+            return View(drink);
         }
     }
 }

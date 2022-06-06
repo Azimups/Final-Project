@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using C_upsB.DataAccesLayer;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace C_upsB.Controllers
@@ -16,9 +17,26 @@ namespace C_upsB.Controllers
             _dbContext = dbContext;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View();
+        }
+
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id == null) 
+            {
+                return NotFound();
+            }
+            var blogger = await _dbContext.Blogs.FindAsync(id);
+            if (blogger==null)
+            {
+                return NotFound();
+            }
+
+            var blogRelateds = await _dbContext.BlogRelateds.ToListAsync();
+            ViewBag.BlogRelateds = blogRelateds;
+            return View(blogger);
         }
     }
 }

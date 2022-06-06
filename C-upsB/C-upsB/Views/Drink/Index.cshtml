@@ -1,11 +1,11 @@
-@model dynamic
+@model List<Drink>
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
 
-    <section id="menu-products">
+<section id="menu-products">
         <div class="container pt-5">
             <div class="row">
                 <div class="drink-menu-back">
@@ -20,66 +20,29 @@
                 </div>
             </div>
             <div class="row">
+                @foreach (var drink in Model)
+                {
                     <div class="col-lg-4 col-md-12">
-                        <a href="/menu-product-detail.html">
+                        <a asp-controller="Drink" asp-action="Detail" asp-route-id="@drink.Id">
                             <div class="drink-product">
                                 <div class="drink-details">
                                     <h3 class="drink-name">
-                                        Kicker<sup>®</sup>
+                                        @Html.Raw(drink.Title)
                                     </h3>
                                     <div class="drink-description">
-                                        Irish Cream Breve
+                                         @Html.Raw(drink.SubTitle)
                                     </div>
                                     <span>
-                                        $ 15.95
+                                         $@Html.Raw(drink.price)
                                     </span>
                                 </div>
                                 <div class="drink-product-image">
-                                    <img src="~/images/Iced_Kicker_HERO.png" alt="">
+                                    <img src="~/images/@drink.Image" alt="">
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-12">
-                        <a href="">
-                            <div class="drink-product">
-                                <div class="drink-details">
-                                    <h3 class="drink-name">
-                                        Caramelizer<sup>®</sup>
-                                    </h3>
-                                    <div class="drink-description">
-                                        Caramel Mocha
-                                    </div>
-                                    <span>
-                                        $ 15.95
-                                    </span>
-                                </div>
-                                <div class="drink-product-image">
-                                    <img src="~/images/Iced_Caramelizer_HERO.png" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <a href="">
-                            <div class="drink-product">
-                                <div class="drink-details">
-                                    <h3 class="drink-name">
-                                        Annihilator<sup>®</sup>
-                                    </h3>
-                                    <div class="drink-description">
-                                        Chocolate Macadamia Nut Breve
-                                    </div>
-                                    <span>
-                                        $ 15.95
-                                    </span>
-                                </div>
-                                <div class="drink-product-image">
-                                    <img src="~/images/Iced_Annihilator_HERO.png" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                }
             </div>
         </div>
     </section>

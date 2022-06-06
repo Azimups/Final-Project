@@ -1,0 +1,127 @@
+@model Merchandise
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+  <section id="merchandise-product-detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="product-detail-image">
+                        <div class="product-secondary-img">
+                            <div class="product-thumbs">
+                                @foreach (var item in ViewBag.Thumbs)
+                                {
+                                    <div class="product-thumb-item">
+                                        <div class="image-wrap">
+                                            <a href="#">
+                                                <img src="@item.Image" id="bean-img-little" alt="" >
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="product-main-img">
+                            <div class="image-wrapper">
+                                <img src="~/images/@Model.Image" id="main-img" alt="">
+                            </div>
+                            <div class="image-wrapper-second">
+                                <img src="https://cdn.shopify.com/s/files/1/0718/6923/products/DecafGround_1800x1800.jpg?v=1604203535" id="ground-img-big" alt="">
+                            </div>
+                            <div class="image-wrapper-third">
+                                <img src="https://cdn.shopify.com/s/files/1/0718/6923/products/DecafWholeBean_1080x.jpg?v=1604203535" id="bean-img-big" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <h1 class="product-single-title">@Model.Name</h1>
+                    <span class="product-price">$@Model.Price
+                    </span>
+                    <div class="product-block"><hr></div>
+                    <div class="type-wrapper">
+                        <span>Grind</span>
+                        <div class="type-input pb-3">
+                            @foreach (var item in ViewBag.MerchTypes)
+                            {
+                                <input type="radio">
+                                <label id="bean-change-btn" for="">@item.Name</label>
+                            }
+                        </div>
+                        <span>weight</span>
+                        <div class="type-input">
+                            <input type="radio">
+                            <label class="oz" for="">16 oz.</label>
+                        </div>
+                        <div class="product-quantity">
+                            <span>Quantity</span>
+                            <div class="quantity-wrapper">
+                                <input type="text">
+                                <button type=button>
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 20 20"><path fill="#444" d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"></path></svg>
+                                </button>
+                                <button type=button class="quantity-plus">
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 20 20"><path fill="#444" d="M17.409 8.929h-6.695V2.258c0-.566-.506-1.029-1.071-1.029s-1.071.463-1.071 1.029v6.671H1.967C1.401 8.929.938 9.435.938 10s.463 1.071 1.029 1.071h6.605V17.7c0 .566.506 1.029 1.071 1.029s1.071-.463 1.071-1.029v-6.629h6.695c.566 0 1.029-.506 1.029-1.071s-.463-1.071-1.029-1.071z"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="payment-buttons">
+                            <button class="add-to-cart-btn" id="add-to-cart-btn">
+                                <span>Add To Cart</span>
+                            </button>
+                            <button class="buy-it-now-btn mt-3">
+                                <span>Buy it now</span>
+                            </button>
+                        </div>
+                        <div class="accordion" id="accordion">
+                            <div class="product-info pt-5">
+                                <p class="small"><b>Dutch Bros Signature Decaffeinated</b></p>
+                                <p class="small"><b><span style="font-weight: 400;">@Model.Description</span></b></p>
+                            </div>
+                            <div class="product-tab">
+                                <button id="open-info-btn" type="button">Shipping information
+                                    <span>
+                                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd"></path></svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="product-content" id="product-content">
+                                <h4><strong>General Shipping Information</strong></h4>
+                                <p>@Model.Information</p>
+                            </div>
+                            <div class="product-tab">
+                                <button id="open-question-btn" type="button">Ask a question
+                                    <span>
+                                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd"></path></svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="product-content" id="product-question">
+                                <div class="form-box-top d-flex">
+                                    <div class="name-input">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="question-name-input">
+                                    </div>
+                                    <div class="email-input">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="question-email-input">
+                                    </div>
+                                </div>
+                                <div class="form-box-bottom">
+                                    <div class="message-input">
+                                        <label for="message">Message</label>
+                                        <input type="text" class="question-message-input">
+                                        <button type="submit" class="btn mt-5">
+                                            Send
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

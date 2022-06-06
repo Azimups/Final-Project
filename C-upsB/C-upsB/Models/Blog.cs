@@ -1,3 +1,7 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Http;
+
 namespace C_upsB.Models
 {
     public class Blog
@@ -25,5 +29,7 @@ namespace C_upsB.Models
         public string TitleSeven { get; set; }
         public string TitleEight { get; set; }
         
+        [NotMapped] public IFormFile Photo { get; set; }
+        public Boolean IsDeleted { get; set; }
     }
 }

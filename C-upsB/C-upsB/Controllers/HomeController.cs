@@ -28,8 +28,9 @@ namespace C_upsB.Controllers
             var stylishitems = await _dbContext.Stylish.SingleOrDefaultAsync();
             var aboutimages = await _dbContext.AboutImages.SingleOrDefaultAsync();
             var abouttexts = await _dbContext.AboutTexts.SingleOrDefaultAsync();
-            var categories = await _dbContext.Categories.ToListAsync();
-            var blogs = await _dbContext.Blogs.ToListAsync();
+            var categories = await _dbContext.Categories.Where(x => x.IsDeleted == false).Take(3).ToListAsync();
+            var blogs = await _dbContext.Blogs.Where(x=>x.IsDeleted==false).ToListAsync();
+            var merchandises = await _dbContext.Merchandises.Where(x => x.IsDeleted == false).Take(3).ToListAsync();
             
             return View( new HomeViewModel
             {
@@ -38,8 +39,9 @@ namespace C_upsB.Controllers
                 AboutTexts = abouttexts,
                 Categories = categories,
                 Blogs = blogs,
+                Merchandises = merchandises,
             });
         }
-
+        
     }
 }

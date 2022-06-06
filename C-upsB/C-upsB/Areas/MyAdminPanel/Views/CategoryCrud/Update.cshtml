@@ -1,0 +1,32 @@
+@model Category
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+<h2>Category</h2>
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Category</h4>
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="Name">Name</label>
+                        <input class="form-control" placeholder="Name" asp-for="Name">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                        
+                        <div class="form-group">
+                            <label asp-for="Photo">Photo</label>
+                            <input class="form-control" placeholder="Photo" asp-for="Photo">
+                            <span asp-validation-for="Photo" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a class="btn btn-light" asp-controller="CategoryCrud" asp-action="Index">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

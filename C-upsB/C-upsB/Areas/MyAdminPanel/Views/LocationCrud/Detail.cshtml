@@ -1,0 +1,24 @@
+@model Location
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+<h2>title</h2>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card mb-4 py-3 border-left-primary">
+            <div class="card-body">
+                <img src="~/images/@Model.LocationName" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card mb-4 py-3 border-left-primary">
+            <div class="card-body">
+                @Model.LocationAddress
+            </div>
+        </div>
+    </div>
+</div>

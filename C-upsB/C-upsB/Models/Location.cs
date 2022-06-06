@@ -1,3 +1,5 @@
+using System;
+
 namespace C_upsB.Models
 {
     public class Location
@@ -16,5 +18,7 @@ namespace C_upsB.Models
         public string LocationPhoneNumber { get; set; }
         public string Headline { get; set; }
         public string SecondHeadline { get; set; }
+        
+        public Boolean IsDeleted { get; set; }
     }
 }

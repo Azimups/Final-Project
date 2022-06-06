@@ -6,8 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Areas\MyAdminPanel\Pages" />
       <Folder Include="Pages" />
       <Folder Include="wwwroot\js" />
+      <Folder Include="wwwroot\MyAdminPanel" />
     </ItemGroup>
 
     <ItemGroup>
@@ -23,6 +25,16 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Areas\MyAdminPanel\Views\vendor\fontawesome-free\package.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\images\54eb49e7-8932-4ba3-9bf1-2d2755a51ce1-homepage_drink_tile_rebel_2.webp" />
+      <None Include="wwwroot\images\acd8a7a0-b431-47a6-bf70-816037118b40-homepage_menu_tile_cold brew.webp" />
+      <None Include="wwwroot\images\e904c9dc-6cda-4809-8c41-f71d0096a0f1-homepage_drink_tile_rebel_2.webp" />
     </ItemGroup>
 
 </Project>

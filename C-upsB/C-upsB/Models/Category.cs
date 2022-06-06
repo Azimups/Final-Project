@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Http;
 
 namespace C_upsB.Models
 {
@@ -16,5 +19,8 @@ namespace C_upsB.Models
         public string MenuHeader { get; set; }
 
         public ICollection<Drink> Drinks { get; set; }
+        
+        [NotMapped] public IFormFile Photo { get; set; }
+        public Boolean IsDeleted { get; set; }
     }
 }

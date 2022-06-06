@@ -1,4 +1,4 @@
-@model dynamic
+@model C_upsB.ViewModels.HomeViewModel
 
 @{
     ViewBag.Title = "title";
@@ -37,199 +37,21 @@
         <div class="container">
             <div class="row">
                 <h2>Full menu</h2>
-                <div class="drink col-md-12">
-                    <a href="/menu-products.html">
-                        <div class="drink-image">
-                            <img src="~/images/Classics.png" alt="">
-                            <div class="frame">
+                @foreach (var category in Model.Categories)
+                {
+                    <div class="drink col-md-12">
+                        <a asp-controller="Drink" asp-action="Index" asp-route-id="@category.Id">
+                            <div class="drink-image">
+                                <img src="~/images/@category.Image" alt="">
+                                <div class="frame">
+                                </div>
                             </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Dutch Classics<sup>®</sup></h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Iced_Still_Cold_Brew_Annihilator_HERO.png" alt="">
-                            <div class="frame">
+                            <div class="drink-name">
+                                <h3>@Html.Raw(category.Name)</h3>
                             </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Cold Brew</h3>
-                        </div>
-                        
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Blended_Freeze_Picture_Perfect_Whip_w_choc_carm_HERO.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Dutch Freeze<sup>®</sup></h3>
-                        </div>
-                        
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Hot_Americano_HERO.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Americano</h3>
-                        </div>
-                        
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Iced_Rebel_Electricberry_HERO.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Dutch Bros Rebel<sup>™</sup> Energy Drink</h3>
-                        </div>
-                        
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="~/images/Blended_Frost_Birthday_Cake_Whip_w_sprinks_HERO.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Dutch Frost<sup>®</sup></h3>
-                        </div>
-                        
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Iced_Tea_Strawberry_HERO.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Tea</h3>
-                        </div>
-
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Kids_Cup_Whip_3.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Kids</h3>
-                        </div>
-                        
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Blended_Smoothie_Green_Apple_HERO.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Smoothie</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Iced_Lemonade_Tigers_Blood_HERO.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Lemonade</h3>
-                        </div>
-                        
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Iced_Soda_Watermelon_HERO.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Dutch Soda<sup>™</sup></h3>
-                        </div>
-                        
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Iced_Chai_Vanilla_Whip_w_cinn_and_nutmeg_HERO.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Chai</h3>
-                        </div>
-                        
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/categories/extras.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Extras</h3>
-                        </div>
-
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/categories/Goodies.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>It's All Goodies<sup>®</sup></h3>
-                        </div>
-                        
-                    </a>
-                </div>
-                <div class="drink">
-                    <a href="">
-                        <div class="drink-image">
-                            <img src="https://files.dutchbros.com/website/menu/drink-images-v2/512px2/Hot_Cocoa_Caramel_HERO.png" alt="">
-                            <div class="frame">
-                            </div>
-                        </div>
-                        <div class="drink-name">
-                            <h3>Dutch Cocoa</h3>
-                        </div>
-                        
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                }
             </div>
         </div>
     </section>

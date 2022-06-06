@@ -82,18 +82,7 @@ overlayCloseBtn.addEventListener("click", function(){
 })
 const RightBar = document.getElementById('right-bar')
 const cardBtn = document.getElementById('cart-btn')
-const BasketBox = document.getElementById('basket-box')
-cardBtn.addEventListener("click",function(){
-    BasketBox.classList.add("basket-opened");
-    RightBar.style.display = "none";
-    $("body").css("overflow", "hidden");
-})
-const closeCardBtn = document.getElementById('close-box')
-closeCardBtn.addEventListener("click",function() {
-    BasketBox.classList.remove("basket-opened");
-    RightBar.style.display = "block";
-    $("body").css("overflow", "visible");
-})
+
 $(document).ready(function(){
     $("#product-content").hide();
 });

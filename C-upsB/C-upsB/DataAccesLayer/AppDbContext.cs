@@ -28,5 +28,7 @@ namespace C_upsB.DataAccesLayer
 
         public DbSet<Merchandise> Merchandises { get; set; }
         public DbSet<MerchandiseTypes> MerchandiseTypes { get; set; }
+
+        public DbSet<Thumbs> Thumbs { get; set; }
     }
 }
