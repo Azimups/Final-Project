@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using C_upsB.ViewModels
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -149,7 +150,7 @@
                             <button class="cart-button" id="cart-btn">
                                 <a asp-controller="Basket" asp-action="Index" style="text-decoration: none">
                                      <i class="fas fa-shopping-cart pd">
-                                        <span>0</span>
+                                        <span>@ViewBag.BasketCount</span>
                                     </i>
                                 </a>
                             </button>

@@ -91,7 +91,56 @@ namespace C_upsB.Controllers
             var basket = JsonConvert.SerializeObject(basketViewModels);
             Response.Cookies.Append("basket",basket);
             return RedirectToAction(nameof(Index));
-            
+        }
+        public  IActionResult IncreaseProduct(int?id)
+        {
+            var basket = Request.Cookies["basket"];
+
+            if (id == null)
+                return BadRequest();
+
+            if (string.IsNullOrEmpty(basket))
+                return BadRequest();
+
+            var products = JsonConvert.DeserializeObject<List<BasketViewModel>>(basket);
+
+            foreach (var item in products)
+            {
+
+                if (item.Id == id)
+                {
+                    item.Count++;
+                }
+            }
+
+            Response.Cookies.Append("basket", JsonConvert.SerializeObject(products));
+            return RedirectToAction(nameof(Index));
+        }
+        public IActionResult DecreaseProduct(int? id)
+        {
+            var basket = Request.Cookies["basket"];
+
+            if (id == null)
+                return BadRequest();
+
+            if (string.IsNullOrEmpty(basket))
+                return BadRequest();
+
+            var products = JsonConvert.DeserializeObject<List<BasketViewModel>>(basket);
+
+            foreach (var product in products)
+            {
+                if (product.Id == id)
+                {
+                    product.Count--;
+                    if (product.Count==0)
+                    {
+                        products = products.Where(x => x.Id != id).ToList();
+                    }
+                }
+            }
+            Response.Cookies.Append("basket", JsonConvert.SerializeObject(products));
+            return RedirectToAction(nameof(Index));
         }
     }
 }
