@@ -1,15 +1,25 @@
-@model dynamic
+@model List<C_upsB.ViewModels.BasketViewModel>
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
-
+@{
+    double TotalPrice = 0;
+    int TotalCount = 0;
+    foreach (var product in Model)
+    {
+        TotalPrice += product.Count * product.Price;
+        TotalCount += product.Count;
+    }
+}
 <section id="cart-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="cart-header">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-12">
+                        <div class="cart-header">
                         <h1>Cart</h1>
                         <div class="cont-shopping">
                             <a href="/menu.html">
@@ -19,19 +29,19 @@
                     </div>
                     <form action="">
                         <div class="cart-item-headers">
-                            <div class="cart-item-quantity">Quantity</div>
-                            <div class="cart-item-price">Total</div>
+                            <div class="cart-item-quantity">@item.Count</div>
+                            <div class="cart-item-price">@TotalPrice</div>
                         </div>
                         <div class="cart-items">
                             <div class="cart-item">
                                 <div class="cart-item-image">
                                     <a href="">
-                                        <img src="https://cdn.shopify.com/s/files/1/0718/6923/products/PrivateReserveWholeBean_540x.jpg?v=1604203545" alt="">
+                                        <img src="@item.Image" alt="">
                                     </a>
                                 </div>
                                 <div class="cart-item-detail">
                                     <div class="cart-item-name">
-                                        <p>Whole Bean</p>
+                                        <p>@item.Name</p>
                                     </div>
                                     <div class="cart-item-quantity">
                                         <input type="text">
@@ -43,7 +53,7 @@
                                         </button>
                                     </div>
                                     <div class="cart-item-price">
-                                        <span class="cart__price">$ 15.95</span>
+                                        <span class="cart__price">$ @item.Price</span>
                                     </div>
                                 </div>
                             </div>
@@ -60,20 +70,22 @@
                                     <div class="col-lg-6 col-md-12">
                                         <div class="cart-item-sub">
                                             <div class="cart-subtotal">Subtotal</div>
-                                            <div>$ 15.95</div>
-                                          </div>
-                                          <div class="cart-checkout-btn">
+                                            <div>$ @TotalPrice</div>
+                                        </div>
+                                        <div class="cart-checkout-btn">
                                             <button type=submit>
                                                 Check out
                                             </button>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </form>
                 </div>
+
+                }
             </div>
         </div>
     </section>
