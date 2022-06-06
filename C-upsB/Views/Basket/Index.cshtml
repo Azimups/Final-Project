@@ -48,10 +48,10 @@
                                     <div class="cart-item-quantity">
                                         <td>@item.Count</td>
                                         <td>
-                                            <a asp-controller="Basket" asp-action="AddProduct" class="btn btn-primary btn-success">+</a>
+                                            <a asp-controller="Basket" asp-action="IncreaseProduct" asp-route-id="@item.Id" class="btn btn-primary btn-success">+</a>
                                         </td>
                                         <td>
-                                            <a class="btn btn-primary btn-danger">-</a>
+                                            <a asp-controller="Basket" asp-action="DecreaseProduct" asp-route-id="@item.Id" class="btn btn-primary btn-danger">-</a>
                                         </td>
                                     </div>
                                     <div class="cart-item-price">
