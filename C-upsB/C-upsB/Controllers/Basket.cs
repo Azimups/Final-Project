@@ -27,7 +27,7 @@ namespace C_upsB.Controllers
             var newBasket = new List<BasketViewModel>();
             foreach (var basketViewModel in basketViewModels)
             {
-                var product = await _dbContext.Merchandises.FindAsync(basketViewModel.Id);
+                var product = await _dbContext.Drinks.FindAsync(basketViewModel.Id);
                 if (product==null)
                 {
                     continue;
@@ -37,9 +37,9 @@ namespace C_upsB.Controllers
                     newBasket.Add(new BasketViewModel()
                     {
                         Id = product.Id,
-                        Name = product.Name,
+                        Name = product.Title,
                         Image = product.Image,
-                        Price = product.Price,
+                        Price = product.price,
                         Count=basketViewModel.Count
                     });
                 }
