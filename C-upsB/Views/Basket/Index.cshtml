@@ -51,7 +51,10 @@
                                             <a asp-controller="Basket" asp-action="IncreaseProduct" asp-route-id="@item.Id" class="btn btn-primary btn-success">+</a>
                                         </td>
                                         <td>
-                                            <a asp-controller="Basket" asp-action="DecreaseProduct" asp-route-id="@item.Id" class="btn btn-primary btn-danger">-</a>
+                                            <a asp-controller="Basket" asp-action="DecreaseProduct" asp-route-id="@item.Id" class="btn btn-primary btn-warning">-</a>
+                                        </td>
+                                        <td>
+                                            <a asp-controller="Basket" asp-action="DeleteProduct" asp-route-id="@item.Id" class="btn btn-primary btn-danger">DEL</a>
                                         </td>
                                     </div>
                                     <div class="cart-item-price">

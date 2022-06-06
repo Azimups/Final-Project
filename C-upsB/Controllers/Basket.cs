@@ -142,5 +142,27 @@ namespace C_upsB.Controllers
             Response.Cookies.Append("basket", JsonConvert.SerializeObject(products));
             return RedirectToAction(nameof(Index));
         }
+        public IActionResult DeleteProduct(int? id)
+        {
+            var basket = Request.Cookies["basket"];
+
+            if (id == null)
+                return BadRequest();
+
+            if (string.IsNullOrEmpty(basket))
+                return BadRequest();
+
+            var products = JsonConvert.DeserializeObject<List<BasketViewModel>>(basket);
+
+            foreach (var product in products)
+            {
+                if (product.Id == id)
+                {
+                    products = products.Where(x => x.Id != id).ToList();
+                }
+            }
+            Response.Cookies.Append("basket", JsonConvert.SerializeObject(products));
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
