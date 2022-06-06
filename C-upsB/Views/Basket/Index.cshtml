@@ -14,19 +14,20 @@
     }
 }
 <section id="cart-wrapper">
-        <div class="container">
+        <div class="container" style="height: 100% !important;">
             <div class="row">
+            <div class="cart-header">
+                <h1>Cart</h1>
+                <div class="cont-shopping">
+                    <a href="/menu.html">
+                        Continue shopping
+                    </a>
+                </div>
+            </div>
                 @foreach (var item in Model)
                 {
                     <div class="col-lg-12">
-                        <div class="cart-header">
-                        <h1>Cart</h1>
-                        <div class="cont-shopping">
-                            <a href="/menu.html">
-                                Continue shopping
-                            </a>
-                        </div>
-                    </div>
+                        
                     <form action="">
                         <div class="cart-item-headers">
                             <div class="cart-item-quantity">Quantity</div>
@@ -44,7 +45,7 @@
                                         <p>@Html.Raw(item.Name)</p>
                                     </div>
                                     <div class="cart-item-quantity">
-                                        <input type="text">
+                                        <td>@item.Count</td>
                                         <button type=button>
                                             <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 20 20"><path fill="#444" d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"></path></svg>
                                         </button>
@@ -79,12 +80,10 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </form>
                 </div>
-
                 }
             </div>
         </div>
