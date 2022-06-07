@@ -42,6 +42,5 @@ namespace C_upsB.Controllers
                 Merchandises = merchandises,
             });
         }
-        
     }
 }

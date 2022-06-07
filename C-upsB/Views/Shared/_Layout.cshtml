@@ -40,8 +40,9 @@
                     </div>
                     <div class="register-form-header" id="register-form-header">
                         <div class="register-box">
-                            <form action="">
+                            <form action="" as>
                                 <div class="register-first-name">
+                                    
                                     <input type="name" placeholder="First Name">
                                 </div>
                                 <div class="register-last-name">
@@ -142,9 +143,21 @@
                             </button>
                         </li>
                         <li>
-                            <button class="user-button" id="user-btn">
-                                <i class="fas fa-user pd"></i>
-                            </button>
+                            @* <a asp-controller="Account" asp-action="Register"> *@
+                            @*      *@
+                            @* </a> *@
+                             @if (User.Identity.IsAuthenticated)
+                            	{
+                            		<a asp-controller="Account" asp-action="Logout">@User.Identity.Name - Logout</a>
+                            	}
+                            	else
+                            	{
+	                                <a asp-controller="Account" asp-action="Login">
+                                        <button class="user-button" id="user-btn">
+                                            <i class="fas fa-user pd"></i>
+                                        </button>
+                                    </a>
+                            	}
                         </li>
                         <li>
                             <button class="cart-button" id="cart-btn">

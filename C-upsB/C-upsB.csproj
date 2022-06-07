@@ -8,7 +8,6 @@
     <ItemGroup>
       <Folder Include="Areas\MyAdminPanel\Pages" />
       <Folder Include="Pages" />
-      <Folder Include="wwwroot\js" />
       <Folder Include="wwwroot\MyAdminPanel" />
     </ItemGroup>
 
@@ -29,6 +28,8 @@
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Areas\MyAdminPanel\Views\vendor\fontawesome-free\package.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\js\vendor\jquery-1.12.0.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\js\vendor\modernizr-2.8.3.min.js" />
     </ItemGroup>
 
     <ItemGroup>

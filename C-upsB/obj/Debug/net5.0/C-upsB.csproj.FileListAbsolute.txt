@@ -310,7 +310,6 @@
 /Users/azim/Desktop/Programming/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Drink/Index.cshtml.g.cs
 /Users/azim/Desktop/Programming/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Location/Index.cshtml.g.cs
 /Users/azim/Desktop/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/About/Index.cshtml.g.cs
-/Users/azim/Desktop/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Blog/Index.cshtml.g.cs
 /Users/azim/Desktop/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Category/Index.cshtml.g.cs
 /Users/azim/Desktop/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Drink/Index.cshtml.g.cs
 /Users/azim/Desktop/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Location/Index.cshtml.g.cs
@@ -511,3 +510,5 @@
 /Users/azim/Desktop/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Merchandise/Detail.cshtml.g.cs
 /Users/azim/Desktop/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Drink/Detail.cshtml.g.cs
 /Users/azim/Desktop/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Basket/Index.cshtml.g.cs
+/Users/azim/Desktop/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Account/Register.cshtml.g.cs
+/Users/azim/Desktop/C-upsB/C-upsB/obj/Debug/net5.0/Razor/Views/Account/Login.cshtml.g.cs
